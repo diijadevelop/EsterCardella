@@ -82,12 +82,22 @@ button{
     width: 100%;
   }
   a.navbar-brand{
-    font-size: 1.8em;
+    font-size: 0.5em;
   }
   .navbar .go-store{
     display: none;
   }
+  .navbar{
+    position: relative;
+  }
+  .navbar-toggler{
+    font-size: 0.5em;
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }
 }
+
 @media only screen and (max-width: 768px) {
   .navbar{
     width: 100%;
