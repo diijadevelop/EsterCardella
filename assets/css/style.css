@@ -13,25 +13,31 @@ font-family: 'Open Sans Condensed', sans-serif;
   background: black;
 }
 .padding{
-  padding: 2.66em 0;
+  padding: 1.5em;
 }
 .darkbg{
-  background: rgba(0, 0, 0, 0.81);
-  padding: 2.5em;
-  border-radius: 1.8em;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 3em;
+  border-radius: 1.5em;
 }
-    .custom-toggler.navbar-toggler {
-        border: 2px solid transparent;
-        border-radius: 15px;
-        font-size: 2em;
+    .navbar-toggler {
+        border: 2px solid rgb(58, 5, 123);
+        background:rgb(58, 5, 123);
+        border-radius: 100px;
+        font-size: 1.5em;
+
     }
     .custom-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(143, 132, 210)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
-    .custom-toggler.navbar-toggler {
-     position:absolute;
-     right: 1.9rem;
-     top: 1.9rem;
+      background-image:
+      url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(0, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+     .go-store{
+       color: black;
+       background: rgb(58, 5, 123);
+       font-size: 1.3rem;
+       font-weight: bolder;
+       border: 1px solid rgb(58, 5, 123);
+       margin-right: 2rem;
      }
 .navbar{
   height: 7rem;
@@ -41,13 +47,16 @@ a.navbar-brand{
   text-transform: uppercase;
   font-size: 3rem;
   margin: 0.4em;
-  color: rgb(123, 108, 214);
+  color: rgb(58, 5, 123);
 font-family: 'Anton', sans-serif;
 }
-.background-home{
+a.navbar-brand:hover{
+  opacity: 0.8;
+}
+.body{
   position: relative;
 }
-.background-home::after{
+body::after{
   content: '';
   background: url('../img/Donna_con_serpenti.jpg') no-repeat center top;
   -webkit-background-size: cover;
@@ -61,4 +70,32 @@ font-family: 'Anton', sans-serif;
   opacity: 0.2;
   width: 100%;
   height: 100%;
+}
+
+button{
+  color: black;
+  background: rgb(58, 5, 123);
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar{
+    width: 100%;
+  }
+  a.navbar-brand{
+    font-size: 1.8em;
+  }
+  .navbar .go-store{
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar{
+    width: 100%;
+  }
+  a.navbar-brand{
+    font-size: 2.2em;
+  }
+  .navbar-toggler{
+    font-size: 1.3em;
+  }
 }
