@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans+Condensed:wght@300&display=swap');/*/TOGGLE/*/
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+}
+[class*="col-"] {
+    padding: 1rem;
+}
+/* Set the border color */
+body{
+font-family: 'Open Sans Condensed', sans-serif;
+  background: black;
+}
+.padding{
+  padding: 2.66em 0;
+}
+.darkbg{
+  background: rgba(0, 0, 0, 0.81);
+  padding: 2.5em;
+  border-radius: 1.8em;
+}
+    .custom-toggler.navbar-toggler {
+        border: 2px solid transparent;
+        border-radius: 15px;
+        font-size: 2em;
+    }
+    .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(143, 132, 210)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    .custom-toggler.navbar-toggler {
+     position:absolute;
+     right: 1.9rem;
+     top: 1.9rem;
+     }
+.navbar{
+  height: 7rem;
+}
+a.navbar-brand{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 0.4em;
+  color: rgb(123, 108, 214);
+font-family: 'Anton', sans-serif;
+}
+.background-home{
+  position: relative;
+}
+.background-home::after{
+  content: '';
+  background: url('../img/Donna_con_serpenti.jpg') no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+}
