@@ -53,11 +53,20 @@ section.bg-home::after{
   header .colorlib-navbar-brand .colorlib-logo {
     font-size: 2.5rem;
   }
+  #colorlib-main-nav .colorlib-table .img:after{
+    background-size: cover;
+    background: url('../img/cemetery_300.jpg') right top no-repeat;
+  }
+
 }
 @media only screen and (min-width:500px && max-width:780px) {
   .go-store{
     font-size: 0.5rem;
   }
+  #colorlib-main-nav .logo {
+    font-size: 75%;
+   }
+
 
 }
 @media only screen and (min-width:500px) {

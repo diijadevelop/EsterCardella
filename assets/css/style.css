@@ -8229,7 +8229,6 @@ h1, h2, h3, h4, h5,
         right: 0;
         content: '';
         background: rgba(0, 0, 0, 0.3);
-        background: url('../img/cemetery_300.jpg') right top no-repeat;
         background-size: auto;
       opacity: 0.1;}
 
