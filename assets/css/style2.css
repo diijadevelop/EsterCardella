@@ -1,38 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 body{
+    background-color: rgba(0, 0, 0, 0.94);
+}
+section.bg-home{
   position: relative;
 }
-body::after{
+section.bg-home::after{
   content: '';
   background: url('../img/Donna_con_serpenti.jpg') no-repeat center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.85;
+  opacity: 0.4;
   width: 100%;
   height: 100%;
+  transform: skewY(-5deg);
+  transform-origin: left;
+
 }
 .go-store{
   display: none;
+  color: white;
+  background: transparent;
+  font-size: 0.5rem;
+  font-weight: bolder;
+  border: 1px solid white;
+  margin-top: 1rem;
+  margin-left: auto;
+}
+.go-store:hover{
+  color: white;
+  background: rgba(81, 12, 203, 0.78);
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
+
+.article{
+  padding: 3em;
+}
+
+@media only screen and (min-width:780px) {
+  .go-store{
+    margin-top: 1.2em;
+    font-size: 0.7rem;
+  }
+  header .colorlib-navbar-brand .colorlib-logo {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width:500px && max-width:780px) {
+  .go-store{
+    font-size: 0.5rem;
+  }
+
 }
 @media only screen and (min-width:500px) {
-
   .go-store{
     display: inline-block;
-    color: white;
-    background: rgba(103, 58, 183, 0.78);
-    font-size: 0.8rem;
-    font-weight: bolder;
-  }
-  .go-store:hover{
-    color: white;
-    background: rgba(103, 58, 183, 0.69);
-    font-size: 0.9rem;
-    font-weight: bolder;
   }
 
   #colorlib-main-nav .logo {
