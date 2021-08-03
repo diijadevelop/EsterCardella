@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;600;800&display=swap');
+
 body{
     background-color: rgba(0, 0, 0, 0.94);
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
+
 section.bg-home{
   position: relative;
 }
@@ -17,7 +21,7 @@ section.bg-home::after{
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.1;
   width: 100%;
   height: 100%;
   transform: skewY(-5deg);
@@ -26,29 +30,31 @@ section.bg-home::after{
 }
 .go-store{
   display: none;
-  color: white;
+  color: rgba(103, 58, 183, 0.63);
   background: transparent;
   font-size: 0.5rem;
   font-weight: bolder;
-  border: 1px solid white;
-  margin-top: 1rem;
-  margin-left: auto;
+  position: relative;
+  margin: 8px 0 0 0;
 }
 .go-store:hover{
-  color: white;
-  background: rgba(81, 12, 203, 0.78);
-  font-size: 0.9rem;
+  color: #673ab7;
   font-weight: bolder;
 }
 
+.title{
+  color: #673ab7;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
 .article{
-  padding: 3em;
+  width: 80%;
 }
 
 @media only screen and (min-width:780px) {
   .go-store{
-    margin-top: 1.2em;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
   }
   header .colorlib-navbar-brand .colorlib-logo {
     font-size: 2.5rem;
@@ -57,21 +63,21 @@ section.bg-home::after{
     background-size: cover;
     background: url('../img/cemetery_300.jpg') right top no-repeat;
   }
-
+  .h1{
+   font-size: 2rem;
+   font-family: 'Barlow Semi Condensed', sans-serif;
+  }
 }
 @media only screen and (min-width:500px && max-width:780px) {
-  .go-store{
-    font-size: 0.5rem;
-  }
-  #colorlib-main-nav .logo {
-    font-size: 75%;
-   }
+
+
+
 
 
 }
 @media only screen and (min-width:500px) {
   .go-store{
-    display: inline-block;
+    display: block;
   }
 
   #colorlib-main-nav .logo {
