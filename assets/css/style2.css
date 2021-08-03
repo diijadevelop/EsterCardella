@@ -45,10 +45,18 @@ section.bg-home::after{
 }
 
 .title{
-  color: #673ab7;
   font-weight: bolder;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+}
+.textGradient {
+  color: #ff8c00; /* fix for not webkit browsers */
+  background: linear-gradient(#673ab7, #314da3);
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .article{
   width: 80%;
@@ -80,7 +88,8 @@ section.bg-home::after{
    width: 100%;
    height: 100%;
    background-image: linear-gradient(#673ab7, #314da3);
-  clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
+   clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 6%, 26% 0, 9% 13%);
+
 
 
 }
