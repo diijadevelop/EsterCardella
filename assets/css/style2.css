@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;600;800&display=swap');
 
-body{
-    background-color: rgba(0, 0, 0, 0.94);
-    font-family: 'Barlow Semi Condensed', sans-serif;
-}
-
 section.bg-home{
   position: relative;
+
 }
+section{
+  margin-bottom: 2em;
+}
+
 section.bg-home::after{
   content: '';
   background: url('../img/Donna_con_serpenti.jpg') no-repeat center top;
@@ -24,8 +24,7 @@ section.bg-home::after{
   opacity: 0.1;
   width: 100%;
   height: 100%;
-  transform: skewY(-5deg);
-  transform-origin: left;
+
 
 }
 .go-store{
@@ -51,8 +50,86 @@ section.bg-home::after{
 .article{
   width: 80%;
 }
+.h1{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.article-secondary{
+  padding: 2em 0;
+}
+
+.footer-logo{
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 3rem;
+}
+#footer{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-bg{
+  position: absolute;
+  top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: linear-gradient(#673ab7, #314da3);
+  clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
+
+
+}
+.footer-content{
+  position: relative;
+  margin-top: 10em;
+  color: black;
+}
+.footer-content a:hover{
+  color:inherit;
+}
+
+.fa-facebook, .fa-instagram, .fa-deviantart, .fa-artstation{
+font-size: 2em;
+    }
+    .fa-facebook:hover, .fa-instagram:hover, .fa-deviantart:hover .fa-artstation:hover{
+font-size: 2.5em;
+opacity: 0.7;
+    }
+#privacy{
+  margin-top: 2em;
+}
+@media only screen and (max-width:400px ) {
+  #footer{
+    margin-top: 20em;
+  }
+}
+  @media only screen and (min-width:780px && max-width:1000px){
+    #footer{
+      padding-top: 50em;
+    }
+  }
+
+  @media only screen and (min-width:500px) {
+    .go-store{
+      display: block;
+    }
+
+    #colorlib-main-nav .logo {
+      font-size: 40px;
+    }
+  }
+
 
 @media only screen and (min-width:780px) {
+  .fa-facebook, .fa-instagram, .fa-deviantart, .fa-artstation{
+  font-size: 3em;
+      }
+      .fa-facebook:hover, .fa-instagram:hover, .fa-deviantart:hover, .fa-artstation:hover{
+  font-size: 3.5em;
+      }
+
   .go-store{
     font-size: 1.5rem;
   }
@@ -65,22 +142,6 @@ section.bg-home::after{
   }
   .h1{
    font-size: 2rem;
-   font-family: 'Barlow Semi Condensed', sans-serif;
   }
 }
-@media only screen and (min-width:500px && max-width:780px) {
-
-
-
-
-
-}
-@media only screen and (min-width:500px) {
-  .go-store{
-    display: block;
-  }
-
-  #colorlib-main-nav .logo {
-    font-size: 40px;
-   }
 }

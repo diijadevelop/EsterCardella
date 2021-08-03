@@ -8135,11 +8135,11 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 16px;
   line-height: 1.8;
   font-weight: normal;
-  background: #fafafa;
+  background-color: rgba(0, 0, 0, 0.94);
   color: gray; }
   body.menu-show {
     overflow: hidden;
@@ -8151,7 +8151,7 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #fec771; }
+  color: rgba(255, 255, 255, 0.54); }
   a:hover, a:focus {
     text-decoration: none !important;
     outline: none !important;
