@@ -3,6 +3,11 @@
   font-family: 'AngerStyles';
   src: url('../font/AngerStyles.woff') format('woff');
 }
+
+body, hr{
+  color: rgba(255, 255, 255, 0.54);
+  border-color: rgba(255, 255, 255, 0.54);
+}
 section.bg-home{
   position: relative;
   margin-bottom: 20px;
@@ -64,6 +69,7 @@ color: rgba(103, 58, 183, 0.63);
 .article{
   width: 80%;
 }
+
 .h1{
   font-family: 'AngerStyles';
 }
@@ -114,18 +120,9 @@ opacity: 0.7;
 #privacy{
   margin-top: 2em;
 }
-@media only screen and (orientation: landscape)  {
-  .fa-facebook, .fa-instagram, .fa-deviantart, .fa-artstation, .fa-envelope{
-  font-size: 1.3em;
-  }
-  #colorlib-main-nav .logo {
-      font-size: 24px;
-  }
-}
+
 @media only screen and (max-width:400px ) {
-  #footer{
-    margin-top: 20em;
-  }
+
   section.bg-home{
     padding-bottom: 3em;
   }
@@ -136,7 +133,7 @@ opacity: 0.7;
     }
   }
 
-  @media only screen and (min-width:500px) and (orientation: portrait) {
+  @media only screen and (min-width:500px){
 
 
     #colorlib-main-nav .logo {
