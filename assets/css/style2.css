@@ -3,7 +3,7 @@
   font-family: 'AngerStyles';
   src: url('../font/AngerStyles.woff') format('woff');
 }
-body {
+body, html {
     overflow-x: hidden !important;
 }
 body, hr{
@@ -39,8 +39,7 @@ section.bg-home::after{
 .triangle{
   position: relative;
   overflow: hidden;
-  max-width: 20em;
-  right: 0;
+  max-width: 30em;
   opacity: 0.5;
 }
 .menu-icons i{
