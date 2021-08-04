@@ -45,20 +45,19 @@
 
 
 
-
-function verificaEmail(contact_email) {
-  let
- re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(contact_email);
+function verificaEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
 }
 
 function controlloForm() {
-  let contact_name = document.forms["form"]["contact_name"].value;
-  let contact_email = document.forms["form"]["contact_email"].value;
-  let contact_request = document.forms["form"]["content_request"].value;
+  var nome = document.forms["formmail"]["nome"].value;
+  var email = document.forms["formmail"]["email"].value;
+  var tel = document.forms["formmail"]["tel"].value;
+  var msg = document.forms["formmail"]["msg"].value;
 
-  if (contact_name == "" || contact_email == "" || contact_request == "") {
-    alert("I campi Nome, Email e Messaggio sono obbligatori");
+  if (nome == "" || email == "" || msg == "") {
+    alert("I campi Nome, Email e Messaggio sono obbligatori!");
     return false;
   }
   else if (verificaEmail(email) !== true) {
