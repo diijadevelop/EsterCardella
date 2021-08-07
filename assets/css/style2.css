@@ -173,9 +173,14 @@ opacity: 0.7;
   #colorlib-main-nav .colorlib-table .img:after{
     background-size: cover;
     background: url('../img/cemetery_300.jpg') right top no-repeat;
+
   }
   .h1{
    font-size: 2rem;
+  }
+  .bg-home{
+    height: 100%;
+    padding-bottom: 6em;
   }
 }
 }
