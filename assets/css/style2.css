@@ -89,6 +89,7 @@ color: rgba(103, 58, 183, 0.63);
 
 }
 .carousel-item img{
+  clip-path: url("../img/path.svg");
 
 }
 /*
@@ -98,7 +99,7 @@ color: rgba(103, 58, 183, 0.63);
 */
 
 
-
+svg{border:1px solid}
 
 
 
