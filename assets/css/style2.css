@@ -140,6 +140,9 @@ opacity: 0.7;
   section.bg-home{
     padding-bottom: 3em;
   }
+  section.bg-home::after{
+    background: url('../img/Donna_con_serpenti-low.jpg') no-repeat center top;
+  }
 }
   @media only screen and (min-width:780px && max-width:1000px){
     #footer{
