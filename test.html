@@ -1,48 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
-    <meta charset='utf-8'>
-    <title>Embedded Facebook Page Photo Gallery with jQuery</title>
-    <style type='text/css'> #thumbs{float:left;width:200px;} #thumbs img{display:block;margin:0 0 10px;cursor:pointer;} #viewer{float:left;} </style>
+    <meta charset="utf-8">
+    <title></title>
   </head>
   <body>
-    <h1>Embedded Facebook Page Photo Gallery with jQuery</h1>
+    <section id="gallery-page" class=" fb_viewcontent" data-name="Gallery" data-type="content" data-id="1" data-token="584085ce92957549164683a540ec4677">
+  			<div class="container">
 
-    <h2></h2>
-    <nav id='thumbs'></nav>
-    <img id='viewer'>
+  				<div class="row mb-60 mb-md-80">
+  					<div class="col-md-5 border-md-right border-md-dark border-width-3">
+  						<div class="border-right border-md-0 border-dark border-width-3">
+  							<p class="font-italic mt-50 mt-md-100 w-75 slogan">
+  								Chiaroscuri, linee e pennellate che raccontano tutto di Simone.							</p>
+  							<h2 class="text-uppercase mt-50 w-75">the best<br/><span> works</span></h2>
+  						</div>
+  					</div>
+  					<div class="col-md-6">
+  						<div class="px-md-30 px-lg-60 mt-30 mt-md-0">
+  							<p class="w-lg-75">
+  								Consulta la raccolta dei migliori lavori realizzati da Simone nel corso della sua carriera da illustratore e fumettista. Troverai i progetti organizzati per categorie in modo da rintracciare rapidamente le opere di tuo interesse. 							</p>
+  							<p class="w-lg-75 mb-0">
+  								Non solo le tavole interne e le più celebri copertine realizzate per DC Comics e Marvel ma anche i disegni preparatori, gli schizzi e le tavole preliminari. Tutto il mondo di Simone è racchiuso qui, raccontato dal tratto della sua matita.							</p>
+  						</div>
+  					</div>
+  				</div>
+  				<div id="totopgallery"></div>
+  				<div id="filters" class="d-flex justify-content-center ">
+  					<button class="btn btn-outline-dark btn-gallery mr-15 text-uppercase is-checked" data-filter="*"> Mostra tutte </button>
 
-    <script src="//code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      (function (105451787607783
- ) {
-        var title = $('h2'),
-            viewer = $('#viewer'),
-            thumbs = $('#thumbs');
+  											<button class="btn btn-outline-dark btn-gallery mr-15 text-uppercase" data-filter=".marvel-masterpieces">MARVEL MASTERPIECES</button>
+  											<button class="btn btn-outline-dark btn-gallery mr-15 text-uppercase" data-filter=".copertine">Copertine</button>
+  											<button class="btn btn-outline-dark btn-gallery mr-15 text-uppercase" data-filter=".preliminari">Preliminari</button>
+  											<button class="btn btn-outline-dark btn-gallery mr-15 text-uppercase" data-filter=".tavole-interne">Tavole Interne</button>
+  											<button class="btn btn-outline-dark btn-gallery mr-15 text-uppercase" data-filter=".sketches">Sketches</button>
+  									</div>
 
-        // album info
-        $.getJSON('//graph.facebook.com/' + 105451787607783
-  + '?callback=?', function(json, status, xhr) {
-          title.html('<a href="' + json.link + '">' + json.name + '</a> from ' + json.from.name);
-        });
+  				<!-- Go to www.addthis.com/dashboard to customize your tools -->
+  				<div class="addthis_inline_share_toolbox"></div>
 
-        // images
-        $.getJSON('//graph.facebook.com/' + 105451787607783
-  + '/photos?callback=?', function(json, status, xhr) {
-          var imgs = json.data;
+  				<div id="gallery_box" class="row mt-90 position-relative lightbox-group grid">
+  												<a href="https://www.simonebianchi.com/data/upload/hd/yellow-jacket.jpg" class="col-md-3 col-sm-4 mb-30 element-item marvel-masterpieces">
+  								<img src="https://www.simonebianchi.com/public/img/loading-progress.gif" data-src="https://www.simonebianchi.com/data/upload/medium/yellow-jacket.jpg" class="img-fluid shadow lazyload" alt="Yellow Jacket" />
+  							</a>
+              </div>
 
-          viewer.attr('src', imgs[0].images[0].source)
 
-          for (var i = 0, l = imgs.length - 1; i < l; i++) {
-            $('<img src="' + imgs[i].images[3].source + '" data-fullsize="' + imgs[i].images[0].source + '">').appendTo(thumbs);
-          }
 
-          $('img', thumbs).bind('click', function(e) {
-            e.preventDefault();
-            viewer.attr('src', $(this).attr('data-fullsize'));
-          });
-        });
-      })('105451787607783'); // let's go -- put the gallery ID here
-    </script>
+            </div>
+  </section>
   </body>
 </html>
