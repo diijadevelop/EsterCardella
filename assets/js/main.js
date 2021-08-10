@@ -1,3 +1,4 @@
+
 (function($) {
 
 	"use strict";
@@ -68,4 +69,5 @@ function controlloForm() {
   }else{
     return true;
   }
-}
+};
+$("#lightgallery").lightGallery();

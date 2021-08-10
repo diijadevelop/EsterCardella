@@ -20,7 +20,7 @@ section{
 
 section.bg-home::after{
   content: '';
-  background: url('../img/Donna_con_serpenti.jpg') no-repeat center top;
+  background: url('../img/HD/Donna_con_serpenti.jpg') no-repeat center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -153,6 +153,15 @@ opacity: 0.7;
 #privacy{
   margin-top: 2em;
 }
+
+
+
+/*    GALLERY   */
+
+
+
+
+/*        MEDIA           */
 
 @media only screen and (max-width:400px ) {
 

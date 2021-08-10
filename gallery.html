@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/style2.css">
+
     <link rel="stylesheet" href="assets\css\lightgallery.css">
-    <link rel="stylesheet" href="assets\css\lg-thumbnail.css">
     <link rel="stylesheet" href="assets\css\lg-zoom.css">
+    <link rel="stylesheet" href="assets\css\lg-thumbnail.css">
+    <link rel="stylesheet" href="assets\css\lg-fullscreen.css">
 
-  	<link rel="stylesheet" href="assets/css/style.css">
-  	<link rel="stylesheet" href="assets/css/style2.css">
-
-
+    <style type='text/css'> #thumbs{float:left;width:200px;} #thumbs img{display:block;margin:0 0 10px;cursor:pointer;} #viewer{float:left;} </style>
 
     <title>Gallery</title>
   </head>
@@ -79,8 +81,7 @@
 
 
 
-
-    <section id="gallery-page" class=" fb_viewcontent py-5" data-name="Gallery" data-type="content" data-id="1" data-token="">
+    <section  class=" fb_viewcontent py-5" data-name="Gallery" data-type="content" data-id="1" data-token="">
             <div class="container pt-md-5 mt-5">
               <p class="lead mt-md-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
@@ -94,17 +95,19 @@
     											<button class="btn btn-outline-dark btn-gallery mr-15 text-uppercase" data-filter=".sketches">Sketches</button>
     									</div> -->
 
+                      <div id="lightgallery" class=" d-grid row mt-5 position-relative lightbox-group grid p-5 m-5">
 
-                      <div id="gallery_box" class=" row mt-5 position-relative lightbox-group grid p-5 m-5">
-
-                        <a href="assets\img\cemetery_300-low.jpg" class="col-md-2 col-sm-4 mb-3">
-                          <img src="assets\img\cemetery_300-low.jpg" class="img-fluid shadow lazyload" alt="cemetary" />
+                        <a href="assets\img\cowgirl_300-low.jpg"  data-lg-size="562-800"  class=" col-md-2 col-sm-4 mb-3">
+                          <img src="assets\img\cowgirl_300-low.jpg" data-src="" class="img-fluid shadow lazyload" alt="Cowgirl" />
                         </a>
-                        <a href="assets\img\cowgirl_300-low.jpg"  class=" col-md-2 col-sm-4 mb-3">
-                          <img src="assets\img\cowgirl_300-low.jpg" data-src="" class="img-fluid shadow lazyload" alt="cowgirl" />
+                        <a href="assets\img\Donna_con_gufi_ink-low.jpg"  data-lg-size="562-800"  class=" col-md-2 col-sm-4 mb-3">
+                          <img src="assets\img\Donna_con_gufi_ink-low.jpg" data-src="" class="img-fluid shadow lazyload" alt="Donna con Gufi" />
                         </a>
-                        <a href="assets\img\Donna_con_serpenti-low.jpg" class="col-md-2 col-sm-4 mb-3">
-                          <img src="assets\img\Donna_con_serpenti-low.jpg" data-src="" class="img-fluid shadow lazyload" alt="donna con serpenti" />
+                        <a href="assets\img\Donna_con_serpenti-low.jpg"  data-lg-size="562-800" class="col-md-2 col-sm-4 mb-3">
+                          <img src="assets\img\Donna_con_serpenti-low.jpg" data-src="" class="img-fluid shadow lazyload" alt="Donna con Serpenti" />
+                        </a>
+                        <a href="assets\img\cemetery_300-low.jpg"  data-lg-size="562-800" class="col-md-2 col-sm-4 mb-3">
+                          <img src="assets\img\cemetery_300-low.jpg" data-src="" class="img-fluid shadow lazyload" alt="Donna con Serpenti" />
                         </a>
 
                       </div>
@@ -171,15 +174,6 @@
         </footer>
 
 
-        <script type="text/javascript">
-
-            lightGallery(document.getElementById('gallery_box'),{
-              plugins: [lgZoom, lgThumbnail],
-              speed: 500,
-
-            });
-        </script>
-
 
 
         <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
@@ -189,13 +183,47 @@
         <script src="https://kit.fontawesome.com/78ffc68b9f.js" crossorigin="anonymous"></script>
 
         <script src="assets/js/main.js"></script>
-        <script src="assets\js\lightgallery.umd.js"></script>
-        <script src="assets\js\lg-zoom.umd.js"></script>
-        <script src="assets\js\lg-thumbnail.umd.js"></script>
+
+        <script src="assets\js\lightgallery.min.js"></script>
+        <script src="assets\js\lg-fullscreen.min.js"></script>
+        <script src="assets\js\lg-zoom.min.js"></script>
+        <script src="assets\js\lg-thumbnail.min.js"></script>
 
 
+        <script type="text/javascript">
+        lightGallery(document.getElementById('lightgallery'), {
+          plugins: [lgZoom, lgThumbnail, lgFullscreen],
+        });
+        </script>
 
+        <script type="text/javascript">
+              (function (gallery_id) {
+                var title = $('h2'),
+                    viewer = $('#viewer'),
+                    thumbs = $('#thumbs');
 
+                // album info
+                $.getJSON('//graph.facebook.com/' + gallery_id + '?callback=?', function(json, status, xhr) {
+                  title.html('<a href="' + json.link + '">' + json.name + '</a> from ' + json.from.name);
+                });
+
+                // images
+                $.getJSON('//graph.facebook.com/' + gallery_id + '/photos?callback=?', function(json, status, xhr) {
+                  var imgs = json.data;
+
+                  viewer.attr('src', imgs[0].images[0].source)
+
+                  for (var i = 0, l = imgs.length - 1; i < l; i++) {
+                    $('<img src="' + imgs[i].images[3].source + '" data-fullsize="' + imgs[i].images[0].source + '">').appendTo(thumbs);
+                  }
+
+                  $('img', thumbs).bind('click', function(e) {
+                    e.preventDefault();
+                    viewer.attr('src', $(this).attr('data-fullsize'));
+                  });
+                });
+              })('105451787607783'); // let's go -- put the gallery ID here
+            </script>
 
   </body>
 </html>
