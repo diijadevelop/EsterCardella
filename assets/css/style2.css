@@ -156,12 +156,12 @@ opacity: 0.7;
 /* SHOP */
 
 .fa-home, .fa-calendar-alt, .fa-shopping-cart{
-  font-size: 10rem;
+  font-size: 1rem;
 }
 
-/* TOGGLE */
+            /* TOGGLE */
 
-      /* Set the border color */
+                  /* Set the border color */
 
 
       .navbar-toggler-icon {
@@ -169,28 +169,46 @@ opacity: 0.7;
         width: 1.5em;
         height: 1.5em;
         vertical-align: middle;
-        content: "";
         background: no-repeat center center;
-        background-size: 100% 100%; }
+
+      }
 
 
     .navbar-toggler {
-        border: 2px solid purple;
+        border: 2px solid transparent;
         padding: 0.25rem 0.75rem;
         font-size: 1.25rem;
         line-height: 1;
-        border-radius: 0.25rem; }
+        border-radius: 0.25rem;
+
+        background: transparent;
+
+      }
+      #navbarToggler{
+        order: 1;
+        padding-top: 1rem;
+      }
 
         .navbar-toggler:hover, .navbar-toggler:focus {
           text-decoration: none;
 
     }
-      /* Setting the stroke to green using rgb values (0, 128, 0) */
+            /* Setting the stroke to green using rgb values (0, 128, 0) */
 
   .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(143, 132, 210)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
 
+.logs button{
+  padding: 0.3rem;
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+.colorlib-navbar-brand{
+  order:1;
+  padding-top: 1rem;
+  padding-left: 0;
+}
 
 /*    GALLERY   */
 
@@ -198,6 +216,7 @@ opacity: 0.7;
 
 
 /*        MEDIA           */
+
 
 @media only screen and (max-width:400px ) {
 
@@ -226,7 +245,7 @@ opacity: 0.7;
   }
 
 
-@media only screen and (min-width:780px) {
+@media only screen and (min-width:768px) {
   .fa-facebook, .fa-instagram, .fa-deviantart, .fa-artstation, .fa-envelope{
   font-size: 3em;
   }
@@ -250,5 +269,16 @@ opacity: 0.7;
     height: 100%;
     padding-bottom: 6em;
   }
-}
+
+  /*SHOP*/
+  #navbarToggler{
+    order: 0;
+    padding-top: 1rem;
+  }
+  .logs button{
+    padding: 0.5rem;
+  }
+    .colorlib-navbar-brand{
+    order:-1;
+  }
 }
