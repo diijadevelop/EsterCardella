@@ -83,6 +83,7 @@ color: rgba(103, 58, 183, 0.63);
 .article{
   width: 80%;
 }
+
 /* CAROUSEL SLIDE HOME*/
 #carousel{
   opacity: 0.3;
@@ -97,9 +98,6 @@ color: rgba(103, 58, 183, 0.63);
   background-image: linear-gradient(#673ab7, #314da3);
 }
 */
-
-
-svg{border:1px solid}
 
 
 
@@ -155,6 +153,44 @@ opacity: 0.7;
 }
 
 
+/* SHOP */
+
+.fa-home, .fa-calendar-alt, .fa-shopping-cart{
+  font-size: 10rem;
+}
+
+/* TOGGLE */
+
+      /* Set the border color */
+
+
+      .navbar-toggler-icon {
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        vertical-align: middle;
+        content: "";
+        background: no-repeat center center;
+        background-size: 100% 100%; }
+
+
+    .navbar-toggler {
+        border: 2px solid purple;
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        border-radius: 0.25rem; }
+
+        .navbar-toggler:hover, .navbar-toggler:focus {
+          text-decoration: none;
+
+    }
+      /* Setting the stroke to green using rgb values (0, 128, 0) */
+
+  .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(143, 132, 210)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+
 
 /*    GALLERY   */
 
@@ -200,6 +236,7 @@ opacity: 0.7;
   }
   header .colorlib-navbar-brand .colorlib-logo {
     font-size: 2.5rem;
+    font-family: 'AngerStyles';
   }
   #colorlib-main-nav .colorlib-table .img:after{
     background-size: cover;
