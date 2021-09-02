@@ -10,6 +10,9 @@ body, hr{
   color: rgba(255, 255, 255, 0.54);
   border-color: rgba(255, 255, 255, 0.54);
 }
+.darker{
+  background: black;
+}
 section.bg-home{
   position: relative;
   margin-bottom: 20px;
@@ -210,9 +213,118 @@ opacity: 0.7;
   padding-left: 0;
 }
 
-/*    GALLERY   */
 
+.product-image {
+    width: 100%
+}
 
+.dot {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 3px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.spec-1 {
+    color: #938787;
+    font-size: 15px;
+}
+
+h5 {
+    font-weight: 400
+}
+
+.para {
+    font-size: 16px
+}
+/*    DETAILS OF PRODUCT   */
+
+#content-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.column{
+	width: 600px;
+	padding: 10px;
+
+}
+#featured{
+	cursor: pointer;
+	border: 2px solid black;
+}
+
+.thumbnail{
+	object-fit: cover;
+	max-width: 180px;
+	max-height: 100px;
+	cursor: pointer;
+	opacity: 0.5;
+	margin: 5px;
+	border: 2px solid black;
+
+}
+.thumbnail:hover{
+	opacity:1;
+}
+
+.active{
+	opacity: 1;
+}
+
+#slide-wrapper{
+	margin-top: 30px;
+	max-width: 500px;
+	display: flex;
+	min-height: 100px;
+	align-items: center;
+}
+
+#slider{
+	width: 640px;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+
+}
+
+#slider::-webkit-scrollbar {
+		width: 8px;
+
+}
+
+#slider::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+}
+
+#slider::-webkit-scrollbar-thumb {
+  background-color: purple;
+  outline: 1px solid slategrey;
+   border-radius: 100px;
+
+}
+
+#slider::-webkit-scrollbar-thumb:hover{
+    background-color: #18b5ce;
+}
+
+.arrow{
+  font-size: 1.5em;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.arrow:hover{
+	opacity: .5;
+	width: 35px;
+	height: 35px;
+}
 
 
 /*        MEDIA           */
@@ -257,6 +369,7 @@ opacity: 0.7;
     font-size: 2.5rem;
     font-family: 'AngerStyles';
   }
+
   #colorlib-main-nav .colorlib-table .img:after{
     background-size: cover;
     background: url('../img/cemetery_300.jpg') right top no-repeat;
